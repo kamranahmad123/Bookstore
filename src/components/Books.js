@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles/Books-section.css';
+import './styles/input-form.css';
 
-function BookList() {
+function Books() {
   const books = [
     {
       id: '1',
@@ -37,8 +38,15 @@ function BookList() {
   ));
 
   return (
-    <div>{booksArray}</div>
+    <>
+      <div>{booksArray}</div>
+      <form className="bookForm">
+        <input className="bookName" placeholder="bookName" />
+        <input className="authorName" placeholder="authorName" />
+        <button className="addButton" type="submit">Add</button>
+      </form>
+    </>
   );
 }
 
-export default BookList;
+export default Books;

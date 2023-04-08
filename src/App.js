@@ -1,7 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import BookList from './components/Book-list';
-import StatuseButton from './components/categories';
-import InputForm from './components/Input-form';
+import Books from './components/Books';
+import Categories from './components/categories';
 import './components/styles/Navbar.css';
 
 function App() {
@@ -10,19 +9,16 @@ function App() {
       <h1>Bookstore CMS</h1>
       <ul className="form">
         <li><Link to="/">Books</Link></li>
-        <li><Link to="/StatusButton">Categories</Link></li>
+        <li><Link to="/categories">Categories</Link></li>
       </ul>
       <Routes>
         <Route
           path="/"
           element={(
-            <div>
-              <BookList />
-              <InputForm />
-            </div>
+            <Books />
 )}
         />
-        <Route path="/StatusButton" element={<StatuseButton />} />
+        <Route path="/categories" element={(<Categories />)} />
       </Routes>
     </div>
   );
