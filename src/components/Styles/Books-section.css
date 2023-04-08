@@ -1,0 +1,15 @@
+.Book-list {
+  list-style: none;
+}
+
+.Books-section {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  flex-direction: column;
+}
+
+.removeButton {
+  width: 20%;
+  margin-left: 13%;
+}
