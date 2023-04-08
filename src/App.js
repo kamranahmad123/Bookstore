@@ -1,4 +1,3 @@
-import './App.css';
 import BookList from './components/Book-list';
 import StatuseButton from './components/categories';
 import InputForm from './components/Input-form';
