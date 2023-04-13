@@ -5,6 +5,11 @@ import './styles/input-form.css';
 function Books() {
   const books = [
     {
+      id: '1',
+      Book: 'History of time',
+      Author: 'Steven hawking',
+    },
+    {
       id: '2',
       Book: 'Himself',
       Author: 'Jess Kidd',
