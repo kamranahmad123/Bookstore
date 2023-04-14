@@ -2,8 +2,7 @@ import React from 'react';
 import './styles/Books-section.css';
 import './styles/input-form.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBooks } from '../redux/features/book/bookSlice';
-import AddButton from './addButton';
+import { removeBooks, addBooks } from '../redux/features/book/bookSlice';
 
 function Books() {
   const dispatch = useDispatch();
@@ -31,11 +30,22 @@ function Books() {
       </button>
     </div>
   ));
+  const addNew = (e) => {
+    e.preventDefault();
+    const bookTitle = e.target[0];
+    const bookAuthor = e.target[1];
+    const itemId = Math.floor((Math.random() * 1000) + 1);
+    dispatch(addBooks({ title: bookTitle.value, author: bookAuthor.value, item_id: itemId }));
+  };
 
   return (
     <>
       <div>{booksArray}</div>
-      <div><AddButton /></div>
+      <form className="bookForm" onSubmit={addNew}>
+        <input className="bookName" placeholder="bookName" />
+        <input className="authorName" placeholder="authorName" />
+        <button className="addButton" type="submit">Add</button>
+      </form>
     </>
   );
 }
