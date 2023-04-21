@@ -1,9 +1,12 @@
+import React from 'react';
 import {
-  Routes, Route, Link, BrowserRouter,
+  Route, Routes,
+  BrowserRouter, Link,
 } from 'react-router-dom';
 import Books from './components/Books';
-import Categories from './components/categories';
+import InputForm from './components/InputForm';
 import './components/styles/Navbar.css';
+import Categories from './components/Categories';
 
 function App() {
   return (
@@ -12,17 +15,22 @@ function App() {
         <h1>Bookstore CMS</h1>
         <ul className="form">
           <li><Link to="/">Books</Link></li>
-          <li><Link to="/categories">Categories</Link></li>
+          <li><Link to="/Categories">Categories</Link></li>
         </ul>
         <Routes>
           <Route
             path="/"
             element={(
-              <Books />
+              <>
+                {' '}
+                <Books />
+                <InputForm />
+              </>
 )}
           />
-          <Route path="/categories" element={(<Categories />)} />
+          <Route path="/Categories" element={<Categories />} />
         </Routes>
+        ,
       </div>
     </BrowserRouter>
   );

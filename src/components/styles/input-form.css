@@ -1,7 +1,10 @@
 .bookForm {
   display: flex;
-  justify-content: space-between;
-  width: 25%;
+  flex-direction: column;
+  width: 41%;
   margin-top: 30px;
-  margin-left: 1%;
+}
+
+.addButton {
+  width: 30%;
 }

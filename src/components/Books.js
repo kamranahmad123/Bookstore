@@ -1,52 +1,54 @@
-import React from 'react';
-import './styles/Books-section.css';
-import './styles/input-form.css';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBooks, addBooks } from '../redux/features/book/bookSlice';
+import { booksRemoval, fetchBooksData } from '../redux/books/booksSlice';
+import './styles/Books-section.css';
 
 function Books() {
+  const { books, isLoading, error } = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.anyName.booksArray);
-  const booksArray = books.map((book) => (
-    <div key={book.item_id} className="Books-section">
-      <ul className="Book-list">
-        <li>{book.title}</li>
-        <li>
-          <strong>
-            By:
-            {' '}
-            {book.author}
-          </strong>
-        </li>
-      </ul>
-      <button
-        type="submit"
-        className="removeButton"
-        onClick={() => {
-          dispatch(removeBooks(book.item_id));
-        }}
-      >
-        Remove
-      </button>
-    </div>
-  ));
-  const addNew = (e) => {
-    e.preventDefault();
-    const bookTitle = e.target[0];
-    const bookAuthor = e.target[1];
-    const itemId = Math.floor((Math.random() * 1000) + 1);
-    dispatch(addBooks({ title: bookTitle.value, author: bookAuthor.value, item_id: itemId }));
-  };
 
+  useEffect(() => {
+    dispatch(fetchBooksData());
+  }, [dispatch]);
+
+  if (isLoading === true) {
+    return <h3>Request is loading</h3>;
+  }
+
+  if (error === true) {
+    return <h3>Error has occured</h3>;
+  }
   return (
-    <>
-      <div>{booksArray}</div>
-      <form className="bookForm" onSubmit={addNew}>
-        <input className="bookName" placeholder="bookName" />
-        <input className="authorName" placeholder="authorName" />
-        <button className="addButton" type="submit">Add</button>
-      </form>
-    </>
+    <div className="book-Data">
+      {books.map((book) => (
+        <div key={book.item_id} className="Books-section">
+          <ul className="Book-list">
+            <li>
+              Book:
+              {book.title}
+            </li>
+            <li>
+              Author:
+              {book.author}
+            </li>
+            <li>
+              Category:
+              {book.category}
+            </li>
+            <button
+              type="button"
+              className="removeButton"
+              onClick={() => {
+                dispatch(booksRemoval(book.item_id));
+              }}
+            >
+              Remove
+            </button>
+
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }
 
