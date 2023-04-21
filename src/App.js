@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 import Books from './components/Books';
 import InputForm from './components/InputForm';
-import Categories from './components/Categories';
 import './components/styles/Navbar.css';
+import Categories from './components/Category';
 
 function App() {
   return (
