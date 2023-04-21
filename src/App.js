@@ -1,8 +1,11 @@
+import React from 'react';
 import {
-  Routes, Route, Link, BrowserRouter,
+  Route, Routes,
+  BrowserRouter, Link,
 } from 'react-router-dom';
 import Books from './components/Books';
-import Categories from './components/categories';
+import InputForm from './components/InputForm';
+import Categories from './components/Categories';
 import './components/styles/Navbar.css';
 
 function App() {
@@ -18,11 +21,16 @@ function App() {
           <Route
             path="/"
             element={(
-              <Books />
+              <>
+                {' '}
+                <Books />
+                <InputForm />
+              </>
 )}
           />
-          <Route path="/categories" element={(<Categories />)} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
+        ,
       </div>
     </BrowserRouter>
   );
