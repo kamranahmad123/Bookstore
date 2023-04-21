@@ -28,7 +28,7 @@ function App() {
               </>
 )}
           />
-          <Route path="/Categories" element={(<Categories />)} />
+          <Route path="/Categories" element={<Categories />} />
         </Routes>
         ,
       </div>
