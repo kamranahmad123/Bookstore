@@ -6,7 +6,7 @@ import {
 import Books from './components/Books';
 import InputForm from './components/InputForm';
 import './components/styles/Navbar.css';
-import Categories from './components/Category';
+import Categories from './components/Categories';
 
 function App() {
   return (
