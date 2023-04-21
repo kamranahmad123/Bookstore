@@ -33,6 +33,7 @@
   <summary>Languages</summary>
   <ul>
     <li>React</li>
+    <li>Redux</li>
   </ul>
 </details>
 
