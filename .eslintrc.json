@@ -19,20 +19,6 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "no-param-reassign": [2, { "props": false }],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-   ]
-  },
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ]
+    "no-param-reassign": [2, { "props": false }]
+  }
 }
