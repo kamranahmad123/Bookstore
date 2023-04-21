@@ -15,7 +15,7 @@ function App() {
         <h1>Bookstore CMS</h1>
         <ul className="form">
           <li><Link to="/">Books</Link></li>
-          <li><Link to="/categories">Categories</Link></li>
+          <li><Link to="/Categories">Categories</Link></li>
         </ul>
         <Routes>
           <Route
@@ -28,7 +28,7 @@ function App() {
               </>
 )}
           />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/Categories" element={<Categories />} />
         </Routes>
         ,
       </div>
