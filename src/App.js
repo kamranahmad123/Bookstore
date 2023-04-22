@@ -7,16 +7,21 @@ import Books from './components/Books';
 import InputForm from './components/InputForm';
 import './components/styles/Navbar.css';
 import Categories from './components/Categories';
+import './components/styles/Books-section.css';
+import avatar from './components/asset/avatar.png';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <h1>Bookstore CMS</h1>
-        <ul className="form">
-          <li><Link to="/">Books</Link></li>
-          <li><Link to="/Categories">Categories</Link></li>
-        </ul>
+      <div className="body">
+        <div className="header">
+          <ul className="Nav-bar">
+            <li className="Project-header">Bookstore CMS</li>
+            <li><Link className="Books" to="/">Books</Link></li>
+            <li><Link className="categories" to="/Categories">CATEGORIES</Link></li>
+          </ul>
+          <img alt="logo" className="logo" src={avatar} />
+        </div>
         <Routes>
           <Route
             path="/"

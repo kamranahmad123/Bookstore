@@ -1,10 +1,57 @@
+.body {
+  background-color: #f5f6fa;
+}
+
+.bottom-line {
+  border-bottom: solid #e8e8e8 1px;
+  padding-left: 100%;
+  width: 190px;
+}
+
 .bookForm {
   display: flex;
-  flex-direction: column;
-  width: 41%;
+  flex-direction: row;
   margin-top: 30px;
+  gap: 0.5%;
+  width: 100%;
+}
+
+.form-header {
+  width: 10.875rem;
+  height: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+  margin-top: 25px;
+}
+
+.bookName,
+.authorName {
+  width: 31%;
+  height: 1.5rem;
+  border-radius: 4px;
+  border: #e8e8e8 solid 1px;
+  color: #888;
+}
+
+.category {
+  width: 20%;
+  height: 1.8rem;
+  border-radius: 4px;
+  border: #e8e8e8 solid 1px;
+  color: #888;
 }
 
 .addButton {
-  width: 30%;
+  width: 11.5rem;
+  height: 1.9rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+}
+
+.book-Form {
+  width: 90%;
+  margin-left: 5%;
 }

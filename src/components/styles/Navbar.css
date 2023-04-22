@@ -1,3 +1,58 @@
 .form {
   list-style: none;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #e8e8e8 solid 2px;
+  width: 102%;
+  margin-left: -1%;
+  background-color: white;
+  height: 70px;
+  margin-top: -15px;
+  padding-bottom: 15px;
+}
+
+.Nav-bar {
+  display: flex;
+  gap: 10%;
+  margin-left: 3%;
+  height: 2.87rem;
+  margin-top: 3%;
+  list-style: none;
+  width: 45%;
+}
+
+.Project-header {
+  width: 15rem;
+  height: 2.313rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+  margin-top: -2%;
+}
+
+.Books {
+  height: 1rem;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+}
+
+.categories {
+  width: 6.563rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  color: #7e7e7e;
+  text-decoration: none;
+}
+
+.logo {
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  margin-right: 5%;
+}
