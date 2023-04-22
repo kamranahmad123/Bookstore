@@ -27,29 +27,33 @@ function InputForm() {
   };
 
   return (
-    <div className="bookForm">
+    <div className="book-Form">
+      <div>
+        <line className="bottom-line" />
+        <h2 className="form-header">ADD NEW BOOK</h2>
+      </div>
       <form className="bookForm" onSubmit={handleSubmition}>
         <input
           className="bookName"
           type="text"
-          placeholder="bookTitle"
+          placeholder="Book title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
           className="authorName"
           type="text"
-          placeholder="authorName"
+          placeholder="Author name"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
         <br />
-        <select id="books-category" name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select id="books-category" className="category" name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">Please choose prefered category</option>
-          {categoryArray.map((cat) => <option key={cat} value={cat}>{cat}</option>)}
+          {categoryArray.map((cat) => <option key={cat} value={cat} className="category-option">{cat}</option>)}
         </select>
         <br />
-        <button className="addButton" type="submit">Add</button>
+        <button className="addButton" type="submit">Add Books</button>
       </form>
     </div>
   );
