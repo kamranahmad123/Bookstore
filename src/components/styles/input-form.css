@@ -28,7 +28,7 @@
 .bookName,
 .authorName {
   width: 31%;
-  height: 1.5rem;
+  height: 2.2rem;
   border-radius: 4px;
   border: #e8e8e8 solid 1px;
   color: #888;
@@ -36,7 +36,7 @@
 
 .category {
   width: 20%;
-  height: 1.8rem;
+  height: 2.4rem;
   border-radius: 4px;
   border: #e8e8e8 solid 1px;
   color: #888;
@@ -44,7 +44,7 @@
 
 .addButton {
   width: 11.5rem;
-  height: 1.9rem;
+  height: 2.3rem;
   border-radius: 3px;
   background-color: #0290ff;
   color: white;

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { booksRemoval, fetchBooksData } from '../redux/books/booksSlice';
 import './styles/Books-section.css';
-import './asset/circle.png';
 
 function Books() {
   const { books, isLoading, error } = useSelector((state) => state.books);
